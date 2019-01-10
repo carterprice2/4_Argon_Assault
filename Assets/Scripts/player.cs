@@ -5,39 +5,43 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class player : MonoBehaviour {
 
+    [Header("General")]
     [Tooltip("in ms^-1")][SerializeField] float xSpeed = 20f;
+    [Tooltip("in ms^-1")] [SerializeField] float ySpeed = 20f;
+    [Tooltip("in m")] [SerializeField] float yrange = 4f;
     [Tooltip("in m")] [SerializeField] float xrange = 7f;
 
-    [Tooltip("in ms^-1")] [SerializeField] float ySpeed = 20f;
-    [Tooltip("in m")] [SerializeField] float yMax = 4f;
-    [Tooltip("in m")] [SerializeField] float yMin = -4f;
-
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = -5f;
+    
+    [Header("Control-Throw Based")]
     [SerializeField] float controlRollFactor = -20f;
+    [SerializeField] float controlPitchFactor = -20f;
 
     float xThrow, yThrow;
+    bool control_enabled = true;
 
     // Use this for initialization
     void Start () {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    void OnPlayerDeath(bool state)  //called by string Reference
     {
-        print("player Collided something");
+        print("Controls Frozen");
+        control_enabled = state;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Player triggered something");
-    }
+   
     // Update is called once per frame
     void Update ()
     {
-        ProcessingTranslation();
-        ProcessingRotation();
+        if (control_enabled)
+        {
+            ProcessingTranslation();
+            ProcessingRotation();
+        }
+        
 
     }
 
@@ -65,7 +69,7 @@ public class player : MonoBehaviour {
         float ClampedPosX = Mathf.Clamp(rawNewXpos, -xrange, xrange);
         
         float rawNewYpos = transform.localPosition.y + yOffset;
-        float ClampedPosY = Mathf.Clamp(rawNewYpos, yMin, yMax);
+        float ClampedPosY = Mathf.Clamp(rawNewYpos, -yrange, yrange);
 
         transform.localPosition = new Vector3(ClampedPosX, ClampedPosY, transform.localPosition.z);
     }
