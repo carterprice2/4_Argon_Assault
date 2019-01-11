@@ -29,7 +29,7 @@ public class player : MonoBehaviour {
 
     void OnPlayerDeath(bool state)  //called by string Reference
     {
-        print("Controls Frozen");
+        //print("Controls Frozen");
         control_enabled = state;
     }
    
