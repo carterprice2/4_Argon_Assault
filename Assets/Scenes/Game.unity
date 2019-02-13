@@ -498,6 +498,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253024613 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1658076721784308, guid: 48026e2758ed43244b2df6771628e22e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1364492663}
 --- !u!1 &260533369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1243,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2129168820}
     m_Modifications:
+    - target: {fileID: 114941085519519776, guid: 48026e2758ed43244b2df6771628e22e,
+        type: 2}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4230337498711400, guid: 48026e2758ed43244b2df6771628e22e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1287,11 +1297,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1658076721784308, guid: 48026e2758ed43244b2df6771628e22e, type: 2}
       propertyPath: m_Name
-      value: Bullets right
+      value: Gun right
       objectReference: {fileID: 0}
     - target: {fileID: 1520149418264466, guid: 48026e2758ed43244b2df6771628e22e, type: 2}
       propertyPath: m_Name
-      value: Bullets left
+      value: Gun left
       objectReference: {fileID: 0}
     - target: {fileID: 198399155687672626, guid: 48026e2758ed43244b2df6771628e22e,
         type: 2}
@@ -1313,6 +1323,16 @@ Prefab:
       propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114941085519519776, guid: 48026e2758ed43244b2df6771628e22e,
+        type: 2}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 253024613}
+    - target: {fileID: 114941085519519776, guid: 48026e2758ed43244b2df6771628e22e,
+        type: 2}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1814601192}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48026e2758ed43244b2df6771628e22e, type: 2}
   m_IsPrefabParent: 0
@@ -1629,6 +1649,11 @@ Transform:
   m_Father: {fileID: 1555148061}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1814601192 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1520149418264466, guid: 48026e2758ed43244b2df6771628e22e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1364492663}
 --- !u!1 &2056331477
 GameObject:
   m_ObjectHideFlags: 0
