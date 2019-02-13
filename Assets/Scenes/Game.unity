@@ -184,8 +184,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16746585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.048, y: 257.8, z: 221.4}
-  m_LocalScale: {x: 130.44588, y: 23.003988, z: 16.000048}
+  m_LocalPosition: {x: -11.048, y: 167, z: 221.4}
+  m_LocalScale: {x: 130.44588, y: 32.949276, z: 16.000048}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -354,6 +354,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 50
+  hits: 10
 --- !u!1 &130159581
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,68 +436,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &170956984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 170956987}
-  - component: {fileID: 170956986}
-  - component: {fileID: 170956985}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &170956985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 170956984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &170956986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 170956984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &170956987
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 170956984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253024613 stripped
 GameObject:
@@ -649,6 +588,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 12
+  hits: 10
 --- !u!1 &586716726
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +727,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 12
+  hits: 10
 --- !u!1001 &895708603
 Prefab:
   m_ObjectHideFlags: 0
@@ -1038,6 +979,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 12
+  hits: 10
 --- !u!1001 &1121595656
 Prefab:
   m_ObjectHideFlags: 0
@@ -1426,6 +1368,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 50
+  hits: 10
 --- !u!1 &1555148059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1518,7 @@ MonoBehaviour:
   deathFX: {fileID: 1841776633976128, guid: 967dfe512ec7a7d45b2819444a54717a, type: 2}
   parent: {fileID: 42194361}
   scorePerHit: 12
+  hits: 10
 --- !u!1 &1713490154 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1034499342650268, guid: 48026e2758ed43244b2df6771628e22e,
@@ -1591,7 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bded72cbf47e1da47ade660d14a95767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoadDelay: 1
+  levelLoadDelay: 0.5
   DeathFX: {fileID: 658917069}
 --- !u!1 &1729774601
 GameObject:
